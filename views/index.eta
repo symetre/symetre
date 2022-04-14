@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symetre</title>
+</head>
+
+<body>
+    <div>
+        <svg width="400px" height="400px" viewBox="0 0 200 200" version="1.1" id="symetreLogo"
+            xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+            <defs id="defs9" />
+            <g id="layer1">
+                <g id="g862" transform="translate(0.735275,-2.9665755)" style="fill-opacity:1">
+                    <path id="rect38" style="fill-opacity:1;fill-rule:evenodd;stroke-width:0.243705"
+                        d="M 174.26472,58.88664 86.606459,27.966575 55.42824,114.89902 Z" />
+                    <path id="path857" style="fill-opacity:1;fill-rule:evenodd;stroke-width:0.243705"
+                        d="M 143.10121,91.034135 24.264725,147.04651 111.92299,177.96658 Z" />
+                </g>
+            </g>
+        </svg>
+    </div>
+</body>
+
+</html>
+
+<style>
+    @keyframes sv {
+        0% {
+            transform: translate(25px, -25px);
+        }
+
+        100% {
+            transform: initial;
+        }
+    }
+
+    @keyframes sb {
+        0% {
+            transform: translate(-25px, 25px);
+        }
+
+        100% {
+            transform: initial;
+        }
+    }
+
+    @keyframes sv {
+        0% {
+            transform: translate(25px, -25px);
+        }
+
+        100% {
+            transform: initial;
+        }
+    }
+
+    @keyframes m {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px)
+        }
+        
+        25% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: initial;
+        }
+    }
+
+    svg #rect38 {
+        transform: translate(25px, -25px);
+        animation: sv 1.5s cubic-bezier(0.85, 0, 0.15, 1) 0.1s;
+        animation-fill-mode: forwards;
+    }
+
+    svg #path857 {
+        animation: sb 1.5s cubic-bezier(0.85, 0, 0.15, 1) 0.1s;
+        transform: translate(-25px, 25px);
+        animation-fill-mode: forwards;
+    }
+    
+    body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5%;
+        font-family:Arial, Helvetica, sans-serif;
+        fill: darkslategray;
+        color: darkslategray;
+        font-size: 14pt;
+    }
+    
+    input[type="url"],
+    input[type="submit"] {
+        border: 2px solid darkslategray;
+        font-size: 14pt;
+        padding: 5px;
+        background-color: aliceblue;
+    }
+    
+    #main {
+        animation: m 1.5s cubic-bezier(0.85, 0, 0.15, 1) 0.1s;
+                animation-fill-mode: forwards;
+        opacity: 0;
+    }
+</style>
